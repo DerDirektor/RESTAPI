@@ -5,8 +5,8 @@ from RestAPI.api.myapi import api
 product= api.model('product', {
     'id': fields.Integer(readOnly = True, description = ' identifyer'),
     'name': fields.String(required =True ),
-    'category_id': fields.Integer(attribute='category.id'),
-    'category_name': fields.String(attribute = 'categroy.name'), # crossfield
+    #'category_id': fields.Integer(attribute='category.id'),
+    #'category_name': fields.String(attribute = 'categroy.name'), # crossfield
 })
 
 catagroy = api.model('Product category',{
