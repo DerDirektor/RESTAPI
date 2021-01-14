@@ -2,7 +2,11 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
-#typeproduct aus der classe""
+#Type: Product
 def add(product):
     db.session.add(product)
     db.session.commit()
+
+def reset():
+    db.drop_all()
+    db.create_all()
